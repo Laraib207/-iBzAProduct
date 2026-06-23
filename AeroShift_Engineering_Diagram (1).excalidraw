@@ -1,0 +1,95 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "ChatGPT",
+  "elements": [
+    {
+      "id": "t1",
+      "type": "text",
+      "x": 50,
+      "y": 40,
+      "width": 500,
+      "height": 40,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "seed": 1,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 0,
+      "link": null,
+      "locked": false,
+      "text": "AERO SHIFT ENGINEERING DIAGRAM",
+      "fontSize": 30,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "AERO SHIFT ENGINEERING DIAGRAM",
+      "lineHeight": 1.2
+    },
+    {
+      "id": "r1",
+      "type": "rectangle",
+      "x": 350,
+      "y": 120,
+      "width": 250,
+      "height": 500
+    },
+    {
+      "id": "t2",
+      "type": "text",
+      "x": 400,
+      "y": 330,
+      "width": 150,
+      "height": 30,
+      "text": "BOTTLE CORE",
+      "fontSize": 24,
+      "fontFamily": 1
+    },
+    {
+      "id": "t3",
+      "type": "text",
+      "x": 40,
+      "y": 140,
+      "width": 250,
+      "height": 200,
+      "text": "1. Carry Loop\n2. Steel Cap\n3. Leak Proof Seal\n4. Wide Mouth\n5. Double Wall Body\n6. Matte Coating\n7. Non-slip Base",
+      "fontSize": 20,
+      "fontFamily": 1
+    },
+    {
+      "id": "t4",
+      "type": "text",
+      "x": 650,
+      "y": 140,
+      "width": 350,
+      "height": 300,
+      "text": "Engineering Notes:\n- BPA Free\n- Vacuum Insulated\n- Hot 12h\n- Cold 24h\n- Laser Branding\n- Food Grade Materials",
+      "fontSize": 20,
+      "fontFamily": 1
+    },
+    {
+      "id": "t5",
+      "type": "text",
+      "x": 50,
+      "y": 700,
+      "width": 1000,
+      "height": 300,
+      "text": "MANUFACTURING FLOW\\n1 Research -> 2 CAD Design -> 3 Prototype -> 4 Material Selection -> 5 Body Forming -> 6 Vacuum Insulation -> 7 Powder Coating -> 8 Logo Printing -> 9 Assembly -> 10 Testing -> 11 Packaging -> 12 Distribution",
+      "fontSize": 22,
+      "fontFamily": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

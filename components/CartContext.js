@@ -5,14 +5,15 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cart, setCart] = useState(() => {
+  const [cart, setCart] = useState([]);
+
+  // Hydrate from localStorage client-side only (avoids SSR mismatch)
+  useEffect(() => {
     try {
       const raw = localStorage.getItem('ibza_cart');
-      return raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      return [];
-    }
-  });
+      if (raw) setCart(JSON.parse(raw));
+    } catch (e) {}
+  }, []);
 
   useEffect(() => {
     try {
@@ -24,9 +25,22 @@ export function CartProvider({ children }) {
     setCart((current) => {
       const existing = current.find((p) => p.id === product.id);
       if (existing) {
-        return current.map((p) => (p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p));
+        return current.map((p) =>
+          p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
+        );
       }
       return [...current, { ...product, quantity: 1 }];
+    });
+  };
+
+  const decrementCart = (id) => {
+    setCart((current) => {
+      const item = current.find((p) => p.id === id);
+      if (!item) return current;
+      if (item.quantity <= 1) return current.filter((p) => p.id !== id);
+      return current.map((p) =>
+        p.id === id ? { ...p, quantity: p.quantity - 1 } : p
+      );
     });
   };
 
@@ -37,7 +51,7 @@ export function CartProvider({ children }) {
   const cartTotal = cart.reduce((s, i) => s + (i.quantity || 0) * (i.price || 0), 0);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, cartCount, cartTotal }}>
+    <CartContext.Provider value={{ cart, addToCart, decrementCart, removeFromCart, clearCart, cartCount, cartTotal }}>
       {children}
     </CartContext.Provider>
   );
